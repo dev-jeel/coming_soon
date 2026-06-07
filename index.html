@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We are working hard to bring you something amazing. Subscribe to get notified and get exclusive early access when we launch.">
+    <meta name="keywords" content="Coming Soon, Launching Soon, Under Construction, Premium Template">
+    <meta name="author" content="Antigravity Studio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Something Amazing Is Coming Soon">
+    <meta property="og:description" content="We are putting the final touches on our new platform. Subscribe to receive early access!">
+    
+    <title>Something Amazing Is Coming Soon</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for premium icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive Particles -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Ambient glowing lights behind glass container -->
+    <div class="glow-sphere glow-1"></div>
+    <div class="glow-sphere glow-2"></div>
+
+    <!-- Left Skyscraper Ad (160x600) -->
+    <div class="ad-skyscraper ad-skyscraper-left">
+        <script>
+            atOptions = {
+                'key' : 'd3dcecfda32858b8db532d8df5decb76',
+                'format' : 'iframe',
+                'height' : 600,
+                'width' : 160,
+                'params' : {}
+            };
+        </script>
+        <script src="https://www.highperformanceformat.com/d3dcecfda32858b8db532d8df5decb76/invoke.js"></script>
+    </div>
+
+    <!-- Right Skyscraper Ad (160x300) -->
+    <div class="ad-skyscraper ad-skyscraper-right">
+        <script>
+            atOptions = {
+                'key' : 'e37a9c5c7a2582441ceaec8f992c5b00',
+                'format' : 'iframe',
+                'height' : 300,
+                'width' : 160,
+                'params' : {}
+            };
+        </script>
+        <script src="https://www.highperformanceformat.com/e37a9c5c7a2582441ceaec8f992c5b00/invoke.js"></script>
+    </div>
+    
+    <!-- Main Wrapper -->
+    <main class="container">
+        <!-- Top Responsive Ad Leaderboard Zone -->
+        <div class="ad-top-wrapper">
+            <!-- 728x90 Desktop Banner -->
+            <div class="ad-banner ad-banner-728">
+                <script>
+                    atOptions = {
+                        'key' : '6bd1f2988083f16ed6a668b14d844688',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/6bd1f2988083f16ed6a668b14d844688/invoke.js"></script>
+            </div>
+            
+            <!-- 468x60 Tablet Banner -->
+            <div class="ad-banner ad-banner-468">
+                <script>
+                    atOptions = {
+                        'key' : 'd12d5c53f3bf57c07dc6fcae297df7f6',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/d12d5c53f3bf57c07dc6fcae297df7f6/invoke.js"></script>
+            </div>
+
+            <!-- 320x50 Mobile Banner -->
+            <div class="ad-banner ad-banner-320">
+                <script>
+                    atOptions = {
+                        'key' : '54531401ca14c73f3f27b514ee37eb06',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/54531401ca14c73f3f27b514ee37eb06/invoke.js"></script>
+            </div>
+        </div>
+
+        <!-- Brand / Logo Section -->
+        <header class="logo-area">
+            <div class="logo">
+                <span class="logo-icon">🪐</span>
+                <span class="logo-text">Nova<span>Labs</span></span>
+            </div>
+        </header>
+
+        <!-- Main Coming Soon Card -->
+        <section class="glass-card">
+            <!-- Badge -->
+            <div class="badge">
+                <span class="pulse-dot"></span>
+                <span>Launching Q3 2026</span>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h1 class="main-title">Something Amazing is <br><span class="gradient-text">Coming Soon</span></h1>
+            <p class="subtitle">We're building the future of decentralized collaboration. Subscribe to receive early-access invitations and exclusive launch-day rewards.</p>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-container" id="countdown">
+                <div class="countdown-box">
+                    <span class="number" id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="countdown-divider">:</div>
+                <div class="countdown-box">
+                    <span class="number" id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="countdown-divider">:</div>
+                <div class="countdown-box">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="countdown-divider">:</div>
+                <div class="countdown-box">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-header">
+                    <span>Project Readiness</span>
+                    <span id="progressPercent">84%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 84%;"></div>
+                </div>
+            </div>
+
+            <!-- Subscription Form -->
+            <form class="subscription-form" id="subscribeForm" novalidate>
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="emailInput" placeholder="Enter your email address" required>
+                    <button type="submit" id="submitBtn">
+                        <span>Notify Me</span>
+                        <i class="fa-solid fa-arrow-right-long button-icon"></i>
+                    </button>
+                </div>
+                <!-- Status Message -->
+                <div class="form-feedback" id="formFeedback"></div>
+            </form>
+
+            <!-- Premium Rewards Smartlink Link -->
+            <div class="rewards-area">
+                <a href="https://www.effectivecpmnetwork.com/kxaqi60h?key=bfb6eb8b8f7ce0f3b93bf8c23fd5db05" target="_blank" rel="noopener noreferrer" class="smartlink-btn">
+                    <span class="btn-shine"></span>
+                    <span class="btn-icon">🎁</span>
+                    <span class="btn-text">Claim Free Launch Rewards</span>
+                    <i class="fa-solid fa-up-right-from-square btn-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Bottom Companion Card (Sponsor Zone) -->
+        <section class="glass-card sponsor-card">
+            <h2 class="sponsor-title"><span class="pulse-dot-green"></span> NovaLabs Sponsors & Partners</h2>
+            <p class="sponsor-subtitle">Explore premium tools and offers from our early launch sponsors</p>
+            
+            <div class="sponsor-ads-grid">
+                <!-- 300x250 Ad Container -->
+                <div class="ad-box-300">
+                    <script>
+                        atOptions = {
+                            'key' : '5db41af12cc54e09d244dcc7f9f0fa4d',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                        };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/5db41af12cc54e09d244dcc7f9f0fa4d/invoke.js"></script>
+                </div>
+                
+                <!-- NativeBanner_1 Container -->
+                <div class="ad-box-native">
+                    <script async="async" data-cfasync="false" src="https://pl29510219.effectivecpmnetwork.com/24f93e413f2586c18278705bf317ca27/invoke.js"></script>
+                    <div id="container-24f93e413f2586c18278705bf317ca27"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Links & Footer -->
+        <footer class="footer-area">
+            <div class="social-links">
+                <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-btn" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 NovaLabs. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Popunder script -->
+    <script src="https://pl29510218.effectivecpmnetwork.com/cf/20/87/cf2087c8f2e5624bd60bf490e23455c4.js"></script>
+    
+    <!-- SocialBar script -->
+    <script src="https://pl29510220.effectivecpmnetwork.com/aa/5e/3e/aa5e3ed6e71f860a0c1681eecee5c905.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
